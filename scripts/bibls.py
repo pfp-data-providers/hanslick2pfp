@@ -68,7 +68,7 @@ for x in tqdm(items, total=len(items)):
     if authors:
         publication_event_uri = URIRef(f"{subj}/F30")
         g.add(
-            (publication_event_uri, RDF.type, SARI_FRBROO["F24_Publication_Expression"])
+            (publication_event_uri, RDF.type, SARI_FRBROO["F30_Publication_Event"])
         )
         label = g.value(subj, RDFS.label)
         g.add(
