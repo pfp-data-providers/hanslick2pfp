@@ -7,7 +7,7 @@ REPORT=${DATA_DIR}/validation_report.txt
 SHACL=${DATA_DIR}/myshapes.ttl
 rm ${SHACL}
 echo "downloading latest SHACL shapes"
-curl -o ${SHACL} https://raw.githubusercontent.com/acdh-oeaw/pfp-schema/refs/heads/main/html/shacl/shacl.ttl
+curl -o ${SHACL} https://raw.githubusercontent.com/acdh-oeaw/pfp-schema/refs/heads/45-shacl-add-rules-for-bibliographic-items/html/shacl/shacl.ttl
 
 echo "Validating ${RDF_FILE} against SHACL shapes"
 docker run --rm -v ${PWD}/${DATA_DIR}:/data ghcr.io/ashleycaselli/shacl:latest validate -datafile /data/${RDF_FILE} -shapesfile /data/myshapes.ttl > ${REPORT}

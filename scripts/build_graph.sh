@@ -10,6 +10,7 @@ start_time=$(date +%s)
 
 python scripts/places.py
 python scripts/persons.py
+python scripts/bibls.py
 python scripts/finalize.py
 
 end_time=$(date +%s)
